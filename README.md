@@ -47,7 +47,7 @@ Run "ddog <command> --help" for more information on a command.
 This will write monitors to the `/tmp/out` directory, with each monitor in JSON format in a separate
 file.
 
-```commandline
+```text
 $ export DD_API_KEY=<generated datadog API key>
 $ export DD_APP_KEY=<generated datadog APP key>
 $ ddog monitor --save-to /tmp/out
@@ -57,4 +57,4 @@ $ ddog monitor --save-to /tmp/out
 ## Installation
 
 Binaries are not currently provided.  In the future, releases will be made with binaries for Linux,
-MacOS, and Windows, and a homebrew tap will be provided.
+macOS, and Windows, and a homebrew tap will be provided.

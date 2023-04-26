@@ -16,9 +16,13 @@ type Options struct {
 	Version bool `help:"Show program version"`
 	// VersionCmd VersionCmd `name:"version" cmd:"" help:"show program version"`
 
-	Debug        bool   `group:"Info" help:"Show debugging information"`
-	OutputFormat string `group:"Info" enum:"auto,jsonl,terminal" default:"auto" help:"How to show program output (auto|terminal|jsonl)"`
-	Quiet        bool   `group:"Info" help:"Be less verbose than usual"`
+	DatadogApiKey string `help:"Datadog API key" env:"DD_API_KEY"`
+	DatadogAppKey string `help:"Datadog APP key" env:"DD_APP_KEY"`
+
+	Debug        bool    `group:"Info" help:"Show debugging information"`
+	OutputFormat string  `group:"Info" enum:"auto,jsonl,terminal" default:"auto" help:"How to show program output (auto|terminal|jsonl)"`
+	Quiet        bool    `group:"Info" help:"Be less verbose than usual"`
+	Monitor      Monitor `cmd:"" help:"Manipulate monitors"`
 }
 
 // Parse calls the CLI parsing routines

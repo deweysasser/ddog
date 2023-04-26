@@ -19,3 +19,5 @@ CHANGELOG.md
 dist
 bin
 .Dockerfile.tmp
+ddog
+go.work*
